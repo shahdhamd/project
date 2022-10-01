@@ -120,6 +120,8 @@ ul{
 }
 
 /* end location section css */
+
+
 .img-special{
     border-radius: 50%;
     width: 33.3%;
@@ -169,6 +171,129 @@ ul{
     padding: 20px;
 }
 /* end location css */
+/* Menu section start */
+.Menu{
+    background-color: rgb(245, 245, 245);
+    overflow: hidden;
+}
+.Menu .Menu-img{
+    border-radius: 50%;
+}
+
+.content{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 26px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.Menu .row{
+    margin: 35px;
+}
+.Menu-btn{
+    background-color: #e7b35a;
+    color:white ;
+    font-size: 700;
+    font-size: 15px;
+}
+.Menu .Menu-img:hover{
+    background-color: rgba(231, 179, 90, 0.7);
+    z-index: 999999;
+}
+.div-img{
+    margin-left: 16px;
+}
+/* start about section */
+
+.about .line{
+    width: 80px;
+     height: 5px;
+     background-color:#e7b35a ;
+}
+
+.about p{
+    font-size: 15px;
+    color: rgb(136, 136, 136);
+    font-weight: 400;
+    line-height: 27px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.about{
+    background-image: url('../img/c-sl-011-1024x663.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.about .overlay{
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.about h3{
+    font-size: 20px;
+    font-size: 700;
+    color: rgb(51, 51, 51);
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+/* start finish css */
+.finish{
+    background-color: rgb(19, 19, 19);
+    overflow: hidden;
+}
+.finish p{
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+.finish ul{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 0;
+    
+}
+.finish li{
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-color: #e7b35a;
+
+}
+.finish li:hover{
+    background-color: white;
+}
+.finish i:hover{
+    color: #e7b35a;
+}
+.finish i{
+    margin: auto;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    border-radius: 50%;
+}
+.finish h5{
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(160, 160, 160);
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+text-align: center;
+}
 
 
 

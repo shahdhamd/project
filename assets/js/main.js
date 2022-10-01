@@ -10,3 +10,108 @@ $('.location button').click(function(){
   $('.slide .close').click(function(){
     $('.slide').slideUp(1000);
   })
+
+  var mypost1=[];
+  var mypost2=[];
+  var mypost3=[];
+  let httpReq=new XMLHttpRequest();
+  create1();
+  async function create1(){
+    let respose=await fetch('https://forkify-api.herokuapp.com/api/search?q=blackberry');
+    let data=await respose.json();
+    mypost1=data.recipes;
+    
+    create2();
+  }
+  
+  async function create2(){
+    let respose1=await fetch('https://forkify-api.herokuapp.com/api/search?q=croissant');
+    let data1=await respose1.json();
+    mypost2=data1.recipes;
+    create3();
+  }
+  async function create3(){
+    let respose2=await fetch('https://forkify-api.herokuapp.com/api/search?q=broccoli');
+    let data2=await respose2.json();
+    mypost3=data2.recipes;
+    display();
+  }
+  
+  
+  
+  function display(){
+    console.log(mypost1[1].title);
+    var test='';
+    for(var i=0;i<4;i++){
+      if(i==3){
+        test+=`<div class="col-md-4 text-center">
+      <div class="d-flex p-3">
+          <div class="me-3 div-img "><img src=${mypost1[i].image_url} class="Menu-img" width="83px" height="83px" /></div>
+          <ul class="list-unstyled">
+              <li class="content">${mypost1[i].title}</li>
+              <li class="content">$${mypost1[i].social_rank}</li>
+          </ul>
+          
+      </div>
+      <div class="text-secondary">---------------------------------------</div>
+      <a href="menu.html" class="btn Menu-btn p-1">More about blackberry</a></div>
+      <div class="col-md-4  text-center">
+      <div class="d-flex p-3">
+          <div class="me-3 div-img "><img src=${mypost2[i].image_url} class="Menu-img" width="83px" height="83px" /></div>
+          <ul class="list-unstyled">
+              <li class="content">${mypost2[i].title}</li>
+              <li class="content">$${mypost2[i].social_rank}</li>
+          </ul>
+      </div>
+      <div class="text-secondary">---------------------------------------</div>
+      <a href="menu.html" class="btn Menu-btn p-1">More about croissant</a>
+      </div>
+  
+  </div>
+  <div class="col-md-4  text-center">
+      <div class="d-flex p-3">
+          <div class="me-3 div-img "><img src=${mypost3[i].image_url} class="Menu-img" width="83px" height="83px" /></div>
+          <ul class="list-unstyled">
+          <li class="content">${mypost3[i].title}</li>
+          <li class="content">$${mypost3[i].social_rank}</li>
+      </ul>
+      </div>
+      <div class="text-secondary">---------------------------------------</div>
+      <a href="menu.html" class="btn Menu-btn p-1">More about broccoli</a>
+  </div>`
+      }else{
+      test+=`<div class="col-md-4  text-center">
+      <div class="d-flex p-3">
+          <div class="me-3 div-img "><img src=${mypost1[i].image_url} class="Menu-img" width="83px" height="83px" /></div>
+          <ul class="list-unstyled ">
+              <li class="content">${mypost1[i].title}</li>
+              <li class="content">$${mypost1[i].social_rank}</li>
+          </ul>
+          
+      </div>
+      <div class="text-secondary">---------------------------------------</div></div>
+      <div class="col-md-4  text-center">
+      <div class="d-flex p-3">
+          <div class="me-3 div-img "><img src=${mypost2[i].image_url} class="Menu-img" width="83px" height="83px" /></div>
+          <ul class="list-unstyled">
+              <li class="content">${mypost2[i].title}</li>
+              <li class="content">$${mypost2[i].social_rank}</li>
+          </ul>
+      </div>
+      <div class="text-secondary">---------------------------------------</div>
+      </div>
+  
+  </div>
+  <div class="col-md-4  text-center">
+      <div class="d-flex p-3">
+          <div class="me-3 div-img "><img class="Menu-img" src=${mypost3[i].image_url} width="83px" height="83px" /></div>
+          <ul class="list-unstyled">
+          <li class="content">${mypost3[i].title}</li>
+          <li class="content">$${mypost3[i].social_rank}</li>
+      </ul>
+      </div>
+      <div class="text-secondary">---------------------------------------</div>
+  </div>`
+    }}
+    demo.innerHTML=test;
+  }
