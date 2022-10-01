@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+ul{
+   list-style-type:none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.location{
+    background-image: url("../img/c-sl-005.jpg");
+    background-size: cover;
+    height: 150vh;
+    background-attachment: fixed;
+    position: relative;
+}
+.location .overlay{
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.location p{
+    color: #888888;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+}
+
+.location .location-card {
+    padding: 30px;
+}
+
+
+.location h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+
+}
+.location li i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.location button{
+    background-color: #e7b35a;
+    color:white ;
+    font-size: 700;
+    font-size: 13px;
+    margin-left: 0;
+}
+.location .btn-div{
+    margin-top: 43px;
+}
+.location .container{
+    overflow: hidden;
+    
+}
+.location .location-title{
+    margin-bottom: 50px;
+    margin-top:50px;
+}
+
+ h2{
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 25px;
+
+}
+
+.clock-icon{
+    color: #e7b35a;
+    font-size: 400;
+    font-size: 24px;
+}
+
+ .minus-icon{
+    color: #e7b35a;
+    font-size: 30px;
+}
+
+
+.slide .map{
+    width: 450px;
+    height: 418px;
+ background-color: white;
+ margin: auto;
+ position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+}
+
+.slide .close{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    font-size: 45px;
+    color: #FFF;
+
+}
+.slide{
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 99999;
+    display: none;
+    
+}
+
+/* end location section css */
+.img-special{
+    border-radius: 50%;
+    width: 33.3%;
+}
+
+.img-carsoul{
+    border-radius: 50%;
+}
+
+.active{
+    display: inline-block;
+    transform: translate(50px);
+}
+.Specialities{
+    position: relative;
+}
+
+.pre{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    cursor: pointer;
+    
+    border-radius: 50%;
+}
+
+.pre-icon{
+    border-radius: 50%;
+    background-color: #e7b35a;
+    color: #FFF;
+    font-size: 39px;
+    padding: 20px;
+}
+.next{
+    position: absolute;
+    left: 77rem;
+    top: 50%;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.next-icon{
+    border-radius: 50%;
+    background-color: #e7b35a;
+    color: #FFF;
+    font-size: 39px;
+    padding: 20px;
+}
+/* end location css */
+
+
+
+
+
+@media (max-width: 1200px) and (min-width: 992px){
+    .location{
+        height: 160vh;
+    }
+    .location .location-card{
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 992px) and (min-width: 768px){
+    .location{
+        height: 475vh;
+    }
+    .location .location-card{
+        margin-bottom: 24px;
+    }
+    
+}
+@media (max-width: 768px) and (min-width: 576px){
+    .location{
+        height: 430vh;
+    }
+    .location .location-card{
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .location{
+        height: 430vh;
+    }
+    .location .location-card{
+        margin-bottom: 24px;
+    }
+}
